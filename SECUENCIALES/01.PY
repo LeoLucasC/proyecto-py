@@ -5,5 +5,6 @@ total=varones+mujeres
 pvarones=varones*100.0 /total
 pmujeres=mujeres*100.0 /total
 
-print(f"%varones={format(pvarones,' .2f')}%")
-print(f"%mujeres={format(pmujeres,' .2f')}%")
+print(f"porcentaje de varones es={format(pvarones,' .2f')}%")
+print(f"porcentaje de mujeres es={format(pmujeres,' .2f')}%")
+print("")
