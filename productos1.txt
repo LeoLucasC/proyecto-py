@@ -1,0 +1,3 @@
+1,Tornillo, UND,0.20,50
+2,lija    ,  40,1.50,20
+3,clavos  , cajax20

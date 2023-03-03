@@ -14,4 +14,3 @@ sumaestatura=metro+pulgadas
 
 print(f"Estatura = {format(sumaestatura,' .2f')} ")
 
-
