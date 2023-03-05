@@ -19,7 +19,7 @@ def txtCodigo_Enter(*args) :
     txtCantidad.config(state='normal')
     txtCantidad.focus()
     
-    productos = open ('PROYECTO-PY-1\productos1.txt','r')
+    productos = open ('productos1.txt','r')
     for linea in productos.readlines() :
         producto = linea.split(',')
         producto_descripcion = producto[1]
@@ -41,6 +41,13 @@ def txtCantidad_Enter(*args) :
     total += subTotal
     svTotal.set(f"Total : S/ { format(total,'.2f') }")    
     tblDetalle.insert('', END, text=svCodigo.get(), values=( producto_descripcion,producto_unidad,svCantidad.get(),producto_precio, format(subTotal,'.2f') ) )
+    
+    #PARA LA IMPRESION:
+    f = open ('holamundo.txt','w')    
+    f.write('MAGALY OBSESA')
+    f.write("\n")
+    f.write("CERDA DE MRD")
+    f.close()
 
     txtCodigo.config(state='disabled')
     txtCantidad.config(state='disabled')
@@ -111,13 +118,18 @@ tblDetalle.heading('#3', text='Cantidad')
 tblDetalle.heading('#4', text='Precio')
 tblDetalle.heading('#5', text='SubTotal')
 
+
 scroll=ttk.Scrollbar(frame,orient='vertical',command=tblDetalle.yview)
 scroll.place(x=570,y=220,width=15,height=150)
 tblDetalle.configure(yscrollcommand=scroll.set)
 
 
+
+
 svTotal = StringVar()
 Label(frame, textvariable=svTotal, anchor=W).place(x=450, y=370, height=25)
 
+#PARA LA IMPRESION LINEA 45
 
 window.mainloop()
+

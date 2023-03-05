@@ -1,3 +1,5 @@
 1,Tornillo, UND,0.20,50
-2,lija    ,  40,1.50,20
-3,clavos  , cajax20
+2,Lija    ,  40,1.50,20
+3,Martillo  , UND,15.00,20
+4,Alicate   , UND,50.00,10
+5,Desarmador,UND,20.50,20
