@@ -42,12 +42,7 @@ def txtCantidad_Enter(*args) :
     svTotal.set(f"Total : S/ { format(total,'.2f') }")    
     tblDetalle.insert('', END, text=svCodigo.get(), values=( producto_descripcion,producto_unidad,svCantidad.get(),producto_precio, format(subTotal,'.2f') ) )
     
-    #PARA LA IMPRESION:
-    f = open ('holamundo.txt','w')    
-    f.write('MAGALY OBSESA')
-    f.write("\n")
-    f.write("CERDA DE MRD")
-    f.close()
+   
 
     txtCodigo.config(state='disabled')
     txtCantidad.config(state='disabled')
@@ -102,6 +97,9 @@ txtCantidad.bind("<Return>", txtCantidad_Enter)
 
 btnNuevo = Button(frame, text='Nuevo', command=btnNuevo_Click, cursor='hand2').place(x=500, y=180, width=80, height=25)
 
+
+
+
 tblDetalle = ttk.Treeview(frame, columns=('id','Descripcion','Unidad','Cantidad','Precio','SubTotal'))
 tblDetalle.place(x=20, y=220, width=550, height=150)
 tblDetalle.column('#0', width=50)
@@ -128,6 +126,34 @@ tblDetalle.configure(yscrollcommand=scroll.set)
 
 svTotal = StringVar()
 Label(frame, textvariable=svTotal, anchor=W).place(x=450, y=370, height=25)
+
+btnIMPRIMIR = Button(frame, text='Imprimir', command=btnNuevo_Click, cursor='hand2').place(x=500, y=400, width=80, height=25)
+
+ #PARA LA IMPRESION:
+f = open ('holamundo.txt','w')    
+f.write('*'*40)
+f.write("\n")
+f.write("             FERRETERIA ")
+f.write("\n")
+f.write("        'El tornillo feliz' ")
+f.write("\n")
+f.write("   'LIMA-CERCADO DE LIMA-28 DE JULIO'")
+f.write("\n")
+f.write("*"*40)
+f.write("\n")
+f.write("           RUC:2050645392 ")
+f.write("\n")
+f.write("*"*40)
+f.write("\n")
+f.write("     FACTURA DE VENTA ELECTRONICA")
+f.write("\n")
+f.write("*"*40)
+f.write("\n")
+f.write("DESCRIPCION             CANT     IMPORTE")
+f.write("\n")
+print(str(producto_descripcion))
+f.close()
+
 
 #PARA LA IMPRESION LINEA 45
 

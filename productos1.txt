@@ -3,3 +3,4 @@
 3,Martillo  , UND,15.00,20
 4,Alicate   , UND,50.00,10
 5,Desarmador,UND,20.50,20
+6,clavos  ,cajax20,3,20
