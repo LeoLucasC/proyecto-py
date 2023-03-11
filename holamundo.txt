@@ -8,3 +8,20 @@
      FACTURA DE VENTA ELECTRONICA
 ****************************************
 DESCRIPCION             CANT     IMPORTE
+MARTILLO                  2        30.00
+Lija 40                   3        4.50 
+DESARMADOR                2        41.OO
+****************************************
+TOTAL DE VENTA:                  S/ 75.5
+****************************************
+VALOR DE VENTA :                 S/61.90
+VALOR DE IGV   :                 S/13.59
+TOTAL DE VENTA :                 S/75.50
+PAGO CON       :                 S/100.0
+VUELTO         :                 S/24.50
+****************************************
+USUARIO        :         LEO LUCAS CAQUI
+DNI            :                75150329
+TELEFONO       :               936062963
+DIRECCION      :          HUAYCAN-LUCUMO
+****************************************

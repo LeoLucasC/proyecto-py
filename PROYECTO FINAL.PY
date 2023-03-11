@@ -7,7 +7,53 @@ producto_precio = 0.0
 producto_cantidad = 0
 total = 0.0
 
+def btnimprimir_click():
+    txtDni.config(state='normal')
+    txtDni.focus()
+    f = open ('holamundo.txt','w')    
+    f.write('*'*40)
+    f.write("\n")
+    f.write("             FERRETERIA ")
+    f.write("\n")
+    f.write("        'El tornillo feliz' ")
+    f.write("\n")
+    f.write("   'LIMA-CERCADO DE LIMA-28 DE JULIO'")
+    f.write("\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("           RUC:2050645392 ")
+    f.write("\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("     FACTURA DE VENTA ELECTRONICA")
+    f.write("\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("DESCRIPCION             CANT     IMPORTE\n")
+    f.write("MARTILLO                  2        30.00\n")
+    f.write("Lija 40                   3        4.50 \n")
+    f.write("DESARMADOR                2        41.OO\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("TOTAL DE VENTA:                  S/ 75.5\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("VALOR DE VENTA :                 S/61.90\n")
+    f.write("VALOR DE IGV   :                 S/13.59\n")
+    f.write("TOTAL DE VENTA :                 S/75.50\n")
+    f.write("PAGO CON       :                 S/100.0\n")
+    f.write("VUELTO         :                 S/24.50\n")
+    f.write("*"*40)
+    f.write("\n")
+    f.write("USUARIO        :         LEO LUCAS CAQUI\n")
+    f.write("DNI            :                75150329\n")
+    f.write("TELEFONO       :               936062963\n")
+    f.write("DIRECCION      :          HUAYCAN-LUCUMO\n")
+    f.write("*"*40)
+    f.close()
 
+
+    
 def btnNuevo_Click() :
     txtCodigo.config(state='normal')
     txtCodigo.focus()
@@ -97,7 +143,7 @@ txtCantidad.bind("<Return>", txtCantidad_Enter)
 
 btnNuevo = Button(frame, text='Nuevo', command=btnNuevo_Click, cursor='hand2').place(x=500, y=180, width=80, height=25)
 
-
+btnIMPRIMIR = Button(frame, text='Imprimir', command=btnimprimir_click, cursor='hand2').place(x=500, y=400, width=80, height=25)
 
 
 tblDetalle = ttk.Treeview(frame, columns=('id','Descripcion','Unidad','Cantidad','Precio','SubTotal'))
@@ -126,33 +172,6 @@ tblDetalle.configure(yscrollcommand=scroll.set)
 
 svTotal = StringVar()
 Label(frame, textvariable=svTotal, anchor=W).place(x=450, y=370, height=25)
-
-btnIMPRIMIR = Button(frame, text='Imprimir', command=btnNuevo_Click, cursor='hand2').place(x=500, y=400, width=80, height=25)
-
- #PARA LA IMPRESION:
-f = open ('holamundo.txt','w')    
-f.write('*'*40)
-f.write("\n")
-f.write("             FERRETERIA ")
-f.write("\n")
-f.write("        'El tornillo feliz' ")
-f.write("\n")
-f.write("   'LIMA-CERCADO DE LIMA-28 DE JULIO'")
-f.write("\n")
-f.write("*"*40)
-f.write("\n")
-f.write("           RUC:2050645392 ")
-f.write("\n")
-f.write("*"*40)
-f.write("\n")
-f.write("     FACTURA DE VENTA ELECTRONICA")
-f.write("\n")
-f.write("*"*40)
-f.write("\n")
-f.write("DESCRIPCION             CANT     IMPORTE")
-f.write("\n")
-print(str(producto_descripcion))
-f.close()
 
 
 #PARA LA IMPRESION LINEA 45
